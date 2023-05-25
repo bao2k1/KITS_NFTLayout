@@ -1,0 +1,23 @@
+export const transferData =[
+    {
+        title:"Revenue",
+        soluong:5,
+        donvi:"ETH",
+        textBtn:5,
+    },{
+        title:"Spending",
+        soluong:2,
+        donvi:"ETH",
+        textBtn:2.0,
+    },{
+        title:"ROI",
+        soluong:14,
+        donvi:"ETH",
+        textBtn:-5.1,
+    },{
+        title:"Estimated",
+        soluong:7,
+        donvi:"ETH",
+        textBtn:3.2,
+    }
+]
