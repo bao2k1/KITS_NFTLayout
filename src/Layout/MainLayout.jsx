@@ -2,8 +2,7 @@ import React from 'react'
 import { Header } from "../components/Header/Header"
 import { Sidebar } from "../components/Sidebar/Sidebar"
 import { styled } from 'styled-components'
-const MainLayout = ({children}) => {
-   const MainScreenWrapper=styled.div`
+const MainScreenWrapper=styled.div`
     display: flex;
     height: 100vh;
     overflow: hidden;
@@ -19,6 +18,8 @@ const MainLayout = ({children}) => {
       overflow-y: auto; /* Cho phép cuộn dọc */
     }
    ` 
+const MainLayout = ({children}) => {
+   
   return (
     <MainScreenWrapper>
     <div className='homescreen-left'>

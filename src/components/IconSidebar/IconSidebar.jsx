@@ -1,10 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { Link } from "react-router-dom";
-
-export const IconSidebar = ({link,active,image,iconname}) => {
-  
-    const IconSidebarWrapper=styled.div`
+const IconSidebarWrapper=styled.div`
     display: flex;
     align-items:center;
     /* justify-content: center;  */
@@ -30,6 +27,9 @@ export const IconSidebar = ({link,active,image,iconname}) => {
       line-height:20px;
     }
    ` 
+export const IconSidebar = ({link,active,image,iconname}) => {
+  
+    
   return (
     <IconSidebarWrapper active={active}>
       <Link style={{ textDecoration: 'none' }} to={link}>

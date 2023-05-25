@@ -8,8 +8,7 @@ import { CardTrend } from 'components/CardTrend';
 import CardTrendImg from "../../assets/img/card-trend.svg"
 import UserImg from "../../assets/img/theman.svg"
 import { cardTrendData } from 'data/cardTrendData';
- const Home = () => {
-  const HomeWrapper=styled.div`
+const HomeWrapper=styled.div`
     background-color:#CAEAE6;
     height: 100%;
     padding-left:40px;
@@ -36,6 +35,8 @@ import { cardTrendData } from 'data/cardTrendData';
       }
     }
    ` 
+ const Home = () => {
+  
     const [activeTab, setActiveTab] = useState('Art');
     const handleTabClick = (tab) => {
       setActiveTab(tab);

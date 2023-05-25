@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components';
 import Etherum from "../../assets/img/Ethereum-blue.svg"
-const Title=styled.h1`
+const Title = styled.h1`
 font-size:14px;
 font-weight:700;
 color:#747475;
@@ -37,15 +37,12 @@ const ChildrenWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Card = ({title,soluong,donvi,children}) => {
-    
+export const Card = ({ title, soluong, donvi, children }) => {
   return (
-
     <WrapperCard>
-        <Title>{title}</Title>
-        <p><img src={donvi==="ETH"?Etherum:""} alt="" />{donvi==="ETH"?soluong.toFixed(2):`+${soluong.toFixed(2)}`} <span>{donvi}</span></p>
-        
-        <ChildrenWrapper>{children}</ChildrenWrapper>
+      <Title>{title}</Title>
+      <p><img src={donvi === "ETH" ? Etherum : ""} alt="" />{donvi === "ETH" ? soluong.toFixed(2) : `+${soluong.toFixed(2)}`} <span>{donvi}</span></p>
+      <ChildrenWrapper>{children}</ChildrenWrapper>
     </WrapperCard>
   )
 }
