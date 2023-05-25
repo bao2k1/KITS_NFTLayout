@@ -197,7 +197,7 @@ export const Sidebar = () => {
             <div className="balance-coin">
                 <img src={ETHBalance} alt="" /> <span>ETH</span>
             </div>
-            <Button width={"100%"} borderColor={"#ccc"} imageBtn={PlusBalance}>
+            <Button width={"100%"} bordercolor={"#ccc"} imagebtn={PlusBalance}>
                 Top up balance
                 <img style={{ height:"20px" }} src={ArrowRight} alt="" />
             </Button>

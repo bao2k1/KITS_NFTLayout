@@ -45,7 +45,7 @@ export const CardCreator = ({username,fullname,rate,avatar}) => {
             <span className='fullname'>{fullname}</span>
             <span>{username}</span>
         </div>
-        <ButtonNoIcon onClick={()=>followHandler()} className="btn" fontsize={12} textColor={followed ? '#FFFFFF' : '#5429FF'} height={40} width={80} bgColor={followed ? '#5429FF' : '#EEEAFF'} borderRadius={"20"} borderColor={"#EEEAFF"}>{followed ? 'Following' : 'Follow'}</ButtonNoIcon>
+        <ButtonNoIcon onClick={()=>followHandler()} className="btn" fontSize={12} textcolor={followed ? '#FFFFFF' : '#5429FF'} height={40} width={80} backgroundcolor={followed ? '#5429FF' : '#EEEAFF'} borderradius={"20"} bordercolor={"#EEEAFF"}>{followed ? 'Following' : 'Follow'}</ButtonNoIcon>
    </CreatorWrapper>
   )
 }

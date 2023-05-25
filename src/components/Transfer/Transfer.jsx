@@ -5,54 +5,28 @@ import { Card } from "../Card/Card";
 import { styled } from "styled-components"
 
 const TransferWrapper = styled.div`
-  display: flex;
-  flex-wrap:2;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Chia thành 2 cột bằng tỷ lệ 1:1
+  grid-gap: 20px; // Khoảng cách giữa các hàng
+  align-items:flex-start;
   width: auto;
   height: 100%;
   padding: 0;
   margin: 0;
   background-color: #CAEAE6;
   /* padding:20px; */
-  .top{
-    margin-bottom:30px;
-  }
-  .top,.bot{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    
-  }
+  margin-left:20px;
+  margin-right:20px;
+
 `
 export const Transfer = () => {
   const data=transferData;
-  const dataTop= transferData.slice(0,2);
-  const dataBot=transferData.slice(2,4);
   return (
    <TransferWrapper>
-    <div className="top">
-      {dataTop.map(data =><Card title={data.title} soluong={data.soluong} donvi={data.donvi}>
+    {data.map((data,i) =><Card key={i} title={data.title} soluong={data.soluong} donvi={data.donvi}>
         
-        <Button borderColor={"#ccc"}>{data.textBtn}</Button>
+        <Button bordercolor={"#ccc"}>{data.textBtn}</Button>
     </Card>)}
-      {/* <Card title={"Revenue"} soluong={5.00} donvi={"ETH"}>
-        
-          <Button borderColor={"#ccc"}>{5.0}</Button>
-      </Card>
-      <Card title={"Spending"} soluong={2.00} donvi={"ETH"}>
-          <Button borderColor={"#ccc"}>{2.0}</Button>
-      </Card> */}
-    </div>
-    <div className="bot">
-
-    {dataBot.map(data =><Card title={data.title} soluong={data.soluong} donvi={data.donvi}>
-        
-        <Button borderColor={"#ccc"}>{data.textBtn}</Button>
-    </Card>)}
-     {/* <Button width={30}></Button> */}
-    </div>
   </TransferWrapper>
   )
 }

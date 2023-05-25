@@ -94,7 +94,7 @@ export const CardTrend = ({timeOclock,ethQual,bottomPara,nameCard,likeNum,CardTr
       <CardTrendWrapper>
         <div className="image-trend">
               <img  src={CardTrendImg} alt="" />
-              <ButtonNoIcon textColor={'#5429FF'} height={50} width={120} bgColor={  '#EEEAFF'} borderRadius={"40"} borderColor={"#EEEAFF"} className='place-card'>Place A Bid</ButtonNoIcon>
+              <ButtonNoIcon textcolor={'#5429FF'} height={50} width={120} bgcolor={  '#EEEAFF'} borderradius={"40"} bordercolor={"#EEEAFF"} className='place-card'>Place A Bid</ButtonNoIcon>
                 <div className="oclock">
                     <img src={Clock} alt="" />
                     <p>{timeOclock}</p>

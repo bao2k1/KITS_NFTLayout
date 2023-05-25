@@ -9,8 +9,8 @@ const ButtonWrapper = styled.button`
     height: ${(props) => props.height + 'px'};
     line-height: 46px;
     background-color: #fff;
-    color: ${(props) => props.textColor};
-    border: ${(props)=>props.borderColor?`1px solid ${props.borderColor}`:"none"};
+    color: ${(props) => props.textcolor};
+    border: ${(props)=>props.bordercolor?`1px solid ${props.bordercolor}`:"none"};
     border-radius: 14px;
     font-size: 14px;
     font-weight: 600;
@@ -26,11 +26,11 @@ const ButtonWrapper = styled.button`
     }
 
 `
- export const Button = ({width,height,textColor,onClick,children,className,borderColor,imageBtn,...rest})=>{
+ export const Button = ({width,height,textcolor,onClick,children,className,bordercolor,imagebtn,...rest})=>{
    
-    return <ButtonWrapper width={width} height={height} textColor={textColor} borderColor={borderColor} className={className} onClick={onClick} imageBtn={imageBtn} ><img src={
+    return <ButtonWrapper width={width} height={height} textcolor={textcolor} bordercolor={bordercolor} className={className} onClick={onClick} imagebtn={imagebtn} ><img src={
         // children>0?ArrowUp:ArrowDown
-        typeof(children)=="number"?(children>0?ArrowUp:ArrowDown):imageBtn
+        typeof(children)=="number"?(children>0?ArrowUp:ArrowDown):imagebtn
     } alt="" />
     {
           typeof(children)=="number"?`${Math.abs(children).toFixed(1)}%`:children
@@ -39,8 +39,8 @@ const ButtonWrapper = styled.button`
     </ButtonWrapper>
 }
 Button.defaultProps={
-    borderColor:"#747475",
-    textColor:"#747475",
+    bordercolor:"#747475",
+    textcolor:"#747475",
     width:"115",
     height:"46",
 }

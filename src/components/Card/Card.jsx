@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '../Button'
 import { styled } from 'styled-components';
 import Etherum from "../../assets/img/Ethereum-blue.svg"
 const Title=styled.h1`
@@ -13,11 +12,10 @@ display: flex;
 flex-direction:column;
 justify-content:center;
 padding: 10px 20px;
-width: 164px;
+/* width: 80%; */
 height: 167px;
 background: #fff;
 border-radius: 12px;
-margin:0px 20px;
 
 p{  text-align:center; 
     font-size:30px;

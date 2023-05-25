@@ -6,10 +6,10 @@ const ButtonWrapper = styled.button`
     width: ${(props) => props.width + 'px'};
     height: ${(props) => props.height + 'px'};
     line-height: 46px;
-    background-color: ${(props) => props.bgColor};
-    color: ${(props) => props.textColor};
-    border: ${(props)=>props.borderColor?`1px solid ${props.borderColor}`:"none"};
-    border-radius: ${(props) => props.borderRadius + 'px'};
+    background-color: ${(props) => props.backgroundcolor};
+    color: ${(props) => props.textcolor};
+    border: ${(props)=>props.bordercolor?`1px solid ${props.bordercolor}`:"none"};
+    border-radius: ${(props) => props.borderradius + 'px'};
     font-size:${(props) => props.fontsize + 'px'};
     font-weight: 600;
     /* text-transform: uppercase; */
@@ -24,9 +24,9 @@ const ButtonWrapper = styled.button`
     }
 
 `
- export const ButtonNoIcon = ({fontsize,bgColor,borderRadius,width,height,textColor,onClick,children,className,borderColor,imageBtn,...rest})=>{
+ export const ButtonNoIcon = ({fontSize,backgroundcolor,borderradius,width,height,textcolor,onClick,children,className,bordercolor,...rest})=>{
    
-    return <ButtonWrapper fontsize={fontsize} bgColor={bgColor} borderRadius={borderRadius} width={width} height={height} textColor={textColor} borderColor={borderColor} className={className} onClick={onClick} imageBtn={imageBtn} >
+    return <ButtonWrapper fontSize={fontSize} backgroundcolor={backgroundcolor} borderradius={borderradius} width={width} height={height} textcolor={textcolor} bordercolor={bordercolor} className={className} onClick={onClick}  >
     {
           typeof(children)=="number"?`${Math.abs(children).toFixed(1)}%`:children
     }
@@ -34,8 +34,9 @@ const ButtonWrapper = styled.button`
     </ButtonWrapper>
 }
 ButtonNoIcon.defaultProps={
-    borderColor:"#747475",
-    textColor:"#747475",
+    bordercolor:"#747475",
+    textcolor:"#747475",
     width:"115",
     height:"46",
+    backgroundcolor:"#fff"
 }

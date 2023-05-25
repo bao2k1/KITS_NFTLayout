@@ -35,6 +35,9 @@ export const Banner = () => {
         display: flex;
         flex-direction:row;
         padding-left:80px;
+        .btn:hover{
+            scale:1.2;
+        }
         .btn-2{
             background-color:transparent;
             border:1px solid #fff;
@@ -47,8 +50,8 @@ export const Banner = () => {
         <BannerWrapper>
             <h1>Discover, Create and Sell Your Own NFT.</h1>
             <div className="btn-banner">
-                <ButtonNoIcon textColor={"#721FDA"} borderRadius={40}>Discover</ButtonNoIcon>
-                <ButtonNoIcon className="btn-2" textColor={"#fff"}  borderRadius={40}>Create</ButtonNoIcon>
+                <ButtonNoIcon className=" btn " textcolor={"#721FDA"} borderradius={40}>Discover</ButtonNoIcon>
+                <ButtonNoIcon className=" btn btn-2" textcolor={"#fff"}  borderradius={40}>Create</ButtonNoIcon>
             </div>
         </BannerWrapper>
   )
