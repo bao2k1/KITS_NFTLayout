@@ -5,7 +5,7 @@ const IconSidebarWrapper=styled.div`
     display: flex;
     align-items:center;
     /* justify-content: center;  */
-    margin-left:60px;
+    margin-left:10px;
     margin-bottom:0;
     height:40px;
     img{
@@ -27,7 +27,7 @@ const IconSidebarWrapper=styled.div`
       line-height:20px;
     }
    ` 
-export const IconSidebar = ({link,active,image,iconname}) => {
+export const IconSidebar = ({children,link,active,image,iconname}) => {
   
     
   return (
@@ -35,7 +35,8 @@ export const IconSidebar = ({link,active,image,iconname}) => {
       {/* <Link style={{ textDecoration: 'none' }} to={link}> */}
 
         <p>
-          <img src={image} alt="" /> 
+          {children}
+          {/* <img src={image} alt="" />  */}
           <span>{iconname}</span>
           </p>
       {/* </Link> */}
