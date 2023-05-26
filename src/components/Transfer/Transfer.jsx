@@ -13,7 +13,7 @@ const TransferWrapper = styled.div`
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #CAEAE6;
+  background-color: var(--transfer-bg-color);
   /* padding:20px; */
   margin-left:20px;
   margin-right:20px;

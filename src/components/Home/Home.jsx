@@ -8,14 +8,16 @@ import { CardTrend } from 'components/CardTrend';
 import CardTrendImg from "../../assets/img/card-trend.svg"
 import UserImg from "../../assets/img/theman.svg"
 import { cardTrendData } from 'data/cardTrendData';
- const Home = () => {
-  const HomeWrapper=styled.div`
-    background-color:#CAEAE6;
+const HomeWrapper=styled.div`
+    background-color:var(--header-bg-color);
     height: 100%;
     padding-left:40px;
     .title{
       align-items:center;
       padding:10px 0;
+      h1{
+        color: var(--text-color);
+      }
     }
     .icon-trend ul {
       display: flex;
@@ -31,17 +33,19 @@ import { cardTrendData } from 'data/cardTrendData';
         text-decoration:none;
         list-style:none;
         font-weight:500;
-        color:#7A797D;
+        color:var(--text-color);
         cursor: pointer;
       }
     }
    ` 
+ const Home = () => {
+  
     const [activeTab, setActiveTab] = useState('Art');
     const handleTabClick = (tab) => {
       setActiveTab(tab);
     };
     const data=cardTrendData;
-    console.log(data);
+    // console.log(data);
   return (
     <HomeWrapper>
       <Row >

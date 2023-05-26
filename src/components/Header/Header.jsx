@@ -3,13 +3,11 @@ import { styled } from 'styled-components'
 import searchIcon from "../../assets/img/search.svg"
 import TheMan from "../../assets/img/theman.svg"
 import Bell from "../../assets/img/bell.svg"
-
-export const Header = () => {
-    const HeaderWrapper=styled.div`
+const HeaderWrapper=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#CAEAE6;
+    background-color:var(--header-bg-color);
     height: 80px;
     position: sticky;
     top: 0;
@@ -59,6 +57,8 @@ export const Header = () => {
       }
     }
    ` 
+export const Header = () => {
+    
   return (
     <HeaderWrapper>
         <div className="search">

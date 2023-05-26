@@ -24,9 +24,9 @@ const ButtonWrapper = styled.button`
     }
 
 `
- export const ButtonNoIcon = ({fontSize,backgroundcolor,borderradius,width,height,textcolor,onClick,children,className,bordercolor,...rest})=>{
+ export const ButtonNoIcon = ({type,fontsize,backgroundcolor,borderradius,width,height,textcolor,onClick,children,className,bordercolor,...rest})=>{
    
-    return <ButtonWrapper fontSize={fontSize} backgroundcolor={backgroundcolor} borderradius={borderradius} width={width} height={height} textcolor={textcolor} bordercolor={bordercolor} className={className} onClick={onClick}  >
+    return <ButtonWrapper type={type} fontsize={fontsize} backgroundcolor={backgroundcolor} borderradius={borderradius} width={width} height={height} textcolor={textcolor} bordercolor={bordercolor} className={className} onClick={onClick}  >
     {
           typeof(children)=="number"?`${Math.abs(children).toFixed(1)}%`:children
     }
@@ -38,5 +38,6 @@ ButtonNoIcon.defaultProps={
     textcolor:"#747475",
     width:"115",
     height:"46",
-    backgroundcolor:"#fff"
+    backgroundcolor:"var(--btn-color)",
+    type:"submit",
 }

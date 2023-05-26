@@ -2,9 +2,7 @@ import React from 'react'
 import { styled } from "styled-components"
 import BannerImg from "../../assets/img/banner.svg"
 import { ButtonNoIcon } from '../Button/ButtonNoIcon'
-export const Banner = () => {
-  
-    const BannerWrapper=styled.div`
+const BannerWrapper=styled.div`
     display: flex;
     flex-direction:column;
     /* justify-content:center; */
@@ -45,6 +43,10 @@ export const Banner = () => {
         }
     }
    ` 
+   
+export const Banner = () => {
+  
+    
   return (
 
         <BannerWrapper>

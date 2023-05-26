@@ -3,15 +3,15 @@ import { styled } from 'styled-components'
 import EthIcon from "../../assets/img/Ethereum-blue.svg"
 import Clock from "../../assets/img/oclock.svg"
 import { ButtonNoIcon } from 'components/Button'
-export const CardTrend = ({timeOclock,ethQual,bottomPara,nameCard,likeNum,CardTrendImg,userImg,username}) => {
-    const CardTrendWrapper=styled.div`
+const CardTrendWrapper=styled.div`
     display:flex;
     flex-direction:column;
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     height: 360px;
     border-radius:20px;
     margin-bottom:20px;
     padding:20px;
+    color:var(--text-color);
     .image-trend{
         width:100%;
         height:60%;
@@ -89,6 +89,8 @@ export const CardTrend = ({timeOclock,ethQual,bottomPara,nameCard,likeNum,CardTr
             justify-content:space-between
         }
    ` 
+export const CardTrend = ({timeOclock,ethQual,bottomPara,nameCard,likeNum,CardTrendImg,userImg,username}) => {
+    
   return (
    
       <CardTrendWrapper>
