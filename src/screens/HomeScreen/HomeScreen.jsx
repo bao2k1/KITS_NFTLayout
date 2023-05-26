@@ -15,8 +15,6 @@ const HomeScreen = () => {
                </Routes>
          </MainLayout>
   )
-
-  
   
 }
 export default HomeScreen

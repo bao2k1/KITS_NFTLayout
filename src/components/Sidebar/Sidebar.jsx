@@ -15,6 +15,7 @@ display: flex;
 flex-direction:column;
 height: 100%;
 /* overflow: hidden; */
+background-color:#fff;
 h1{ 
     margin-top:30px;
     margin-left:60px;
@@ -157,6 +158,13 @@ export const Sidebar = () => {
    
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const setDarkMode =()=>{
+    document.querySelector('body').setAttribute('data-mode', 'dark');
+  }
+  const setLightMode =()=>{
+    document.querySelector('body').setAttribute('data-mode', 'light');
+  }
+  setDarkMode();
   const handleToggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
