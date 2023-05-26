@@ -7,7 +7,7 @@ const HeaderWrapper=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#CAEAE6;
+    background-color:var(--header-bg-color);
     height: 80px;
     position: sticky;
     top: 0;

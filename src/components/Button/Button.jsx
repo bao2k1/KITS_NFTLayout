@@ -8,7 +8,7 @@ const ButtonWrapper = styled.button`
     width: ${(props) => props.width + 'px'};
     height: ${(props) => props.height + 'px'};
     line-height: 46px;
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     color: ${(props) => props.textcolor};
     border: ${(props)=>props.bordercolor?`1px solid ${props.bordercolor}`:"none"};
     border-radius: 14px;
@@ -40,7 +40,7 @@ const ButtonWrapper = styled.button`
 }
 Button.defaultProps={
     bordercolor:"#747475",
-    textcolor:"#747475",
+    textcolor:"var(--text-color)",
     width:"115",
     height:"46",
 }

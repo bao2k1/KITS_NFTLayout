@@ -10,12 +10,15 @@ import IconMarket from "../../assets/img/market.svg"
 import ETHBalance from "../../assets/img/ETH_balance.svg"
 import PlusBalance from "../../assets/img/plus_balance.svg"
 import ArrowRight from "../../assets/img/arrow-right.svg"
+import { NavLink } from 'react-router-dom'
+import {ReactComponent as MarketCustomIcon} from "../../assets/img/market.svg";
 const SidebarWrapper=styled.div`
 display: flex;
 flex-direction:column;
 height: 100%;
 /* overflow: hidden; */
-background-color:#fff;
+background-color:var(--body-background);
+
 h1{ 
     margin-top:30px;
     margin-left:60px;
@@ -24,7 +27,7 @@ h1{
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
-    color: #27262E;
+    color: var(--text-color);
 }
     .logo-img{
         height: 56px;
@@ -37,35 +40,13 @@ h1{
         justify-content:space-between;
         margin-bottom:60px;
         .change-mode-btn{
-            /* width: 80px;
-            height: 40px;
-            background-color: #f0f0f0;
-            border-radius: 20px;
-            border:none;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content:space-between;
-            margin-left:20%;
-            .circle{
-                display: flex;
-                justify-content:center;
-                align-items:center;
-                height: 30px;
-                width: 30px;
-                margin:0;
-                border-radius:50%;
-          
-            }
-            .circle:active{
-                background-color:#fff;
-            } */
+           
             display: flex;
             justify-content:center;
             align-items:center;
             height:auto;
             padding:0;
-            background-color:#fff;
+            background-color:var(--body-background);
             border:none;
             margin-right:50px;
             position:relative;
@@ -152,6 +133,19 @@ h1{
             }
         }
     }
+    .active{
+        p{
+            color:#5429FF;
+            .icon path{
+        stroke:#5429FF;
+    }
+        }
+        
+    }
+    .navlink{
+        text-decoration:none;
+    }
+    
     
 ` 
 export const Sidebar = () => {
@@ -164,16 +158,30 @@ export const Sidebar = () => {
   const setLightMode =()=>{
     document.querySelector('body').setAttribute('data-mode', 'light');
   }
-  setDarkMode();
+
   const handleToggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+    if(!isDarkMode) 
+    setDarkMode();
+    else
+    setLightMode();
   };
   return (
     <SidebarWrapper>
         <img className='logo-img' src={Logo} alt="" />
-        <IconSidebar link={"/"} active={"active"} image={IconDash} iconname={"Dashboard"}></IconSidebar>
-        <IconSidebar link={"/market"} image={IconMarket} iconname={"Market"}></IconSidebar>
-        <IconSidebar image={IconMarket} iconname={"Active Bids"}></IconSidebar>
+        <NavLink className="navlink" to="/" activeClassName="active" >
+      
+            {/* <MarketCustomIcon className='icon' stroke='red'/> */}
+             <IconSidebar image={IconDash} iconname="Dashboard" />
+        </NavLink>
+        {/* <IconSidebar    link={"/"}  image={IconDash} iconname={"Dashboard"}></IconSidebar> */}
+        <NavLink className="navlink" to="/market" activeClassName="active" >
+
+            <IconSidebar image={IconMarket} iconname={"Market"}></IconSidebar>
+        </NavLink>
+        <NavLink className="navlink" to="/login" activeClassName="active" >
+             <IconSidebar image={IconMarket} iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
         <h1>PROFILE</h1>
         <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
         <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
@@ -186,13 +194,7 @@ export const Sidebar = () => {
         <IconSidebar image={IconMarket} iconname={"Dashboard"}>
         </IconSidebar >
             <button className='change-mode-btn'>
-                {/* <div className='circle'>
-                    <img src={LightModeIcon} alt="" />
-                </div> 
-                 <div className='circle'>
-                 <img src={DarkModeIcon} alt="" />    
-                </div>                */}
-                
+       
                 
                 <input type="checkbox" id="darkmode-toggle" checked={isDarkMode} onChange={handleToggleDarkMode} />
                 <label htmlFor="darkmode-toggle"/>

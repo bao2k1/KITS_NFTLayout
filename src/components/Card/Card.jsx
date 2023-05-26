@@ -4,30 +4,31 @@ import Etherum from "../../assets/img/Ethereum-blue.svg"
 const Title = styled.h1`
 font-size:14px;
 font-weight:700;
-color:#747475;
+color:var(--text-color);
 margin:0;
 `;
 const WrapperCard = styled.div`
+
 display: flex;
 flex-direction:column;
 justify-content:center;
 padding: 10px 20px;
 /* width: 80%; */
 height: 167px;
-background: #fff;
+background: var(--card-bg-color);
 border-radius: 12px;
 
 p{  text-align:center; 
     font-size:30px;
     font-weight:700;
-    color:#000;
+    color:var(--text-color);
     margin:12px 0;
 
 }
 span{
     font-size:16px;
     font-weight:400;
-    color:#333030;
+    color:var(--text-color);
 }
 
 

@@ -9,12 +9,15 @@ import CardTrendImg from "../../assets/img/card-trend.svg"
 import UserImg from "../../assets/img/theman.svg"
 import { cardTrendData } from 'data/cardTrendData';
 const HomeWrapper=styled.div`
-    background-color:#CAEAE6;
+    background-color:var(--header-bg-color);
     height: 100%;
     padding-left:40px;
     .title{
       align-items:center;
       padding:10px 0;
+      h1{
+        color: var(--text-color);
+      }
     }
     .icon-trend ul {
       display: flex;
@@ -30,7 +33,7 @@ const HomeWrapper=styled.div`
         text-decoration:none;
         list-style:none;
         font-weight:500;
-        color:#7A797D;
+        color:var(--text-color);
         cursor: pointer;
       }
     }
@@ -42,7 +45,7 @@ const HomeWrapper=styled.div`
       setActiveTab(tab);
     };
     const data=cardTrendData;
-    console.log(data);
+    // console.log(data);
   return (
     <HomeWrapper>
       <Row >

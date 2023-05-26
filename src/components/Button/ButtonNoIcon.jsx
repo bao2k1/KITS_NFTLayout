@@ -38,6 +38,6 @@ ButtonNoIcon.defaultProps={
     textcolor:"#747475",
     width:"115",
     height:"46",
-    backgroundcolor:"#fff",
+    backgroundcolor:"var(--btn-color)",
     type:"submit",
 }

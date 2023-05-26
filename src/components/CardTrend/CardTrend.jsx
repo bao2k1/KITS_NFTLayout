@@ -6,11 +6,12 @@ import { ButtonNoIcon } from 'components/Button'
 const CardTrendWrapper=styled.div`
     display:flex;
     flex-direction:column;
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     height: 360px;
     border-radius:20px;
     margin-bottom:20px;
     padding:20px;
+    color:var(--text-color);
     .image-trend{
         width:100%;
         height:60%;

@@ -13,7 +13,7 @@ const HomeScreen = () => {
                  <Route path="/market" element={<Market />} />
                
                </Routes>
-         </MainLayout>
+    </MainLayout>
   )
   
 }

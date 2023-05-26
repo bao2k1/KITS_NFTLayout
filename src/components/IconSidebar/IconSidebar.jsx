@@ -14,7 +14,7 @@ const IconSidebarWrapper=styled.div`
     }
     p{
       display: flex;
-      color:${(props)=>props.active?"#5429FF":"#7A797D"};
+      color:${(props)=>props.active==="active"?"#5429FF":"var(--text-color)"};
       font-weight:700;
       height: 20px;
       align-items:center;
@@ -32,10 +32,13 @@ export const IconSidebar = ({link,active,image,iconname}) => {
     
   return (
     <IconSidebarWrapper active={active}>
-      <Link style={{ textDecoration: 'none' }} to={link}>
+      {/* <Link style={{ textDecoration: 'none' }} to={link}> */}
 
-        <p><img src={image} alt="" /> <span>{iconname}</span></p>
-      </Link>
+        <p>
+          <img src={image} alt="" /> 
+          <span>{iconname}</span>
+          </p>
+      {/* </Link> */}
     </IconSidebarWrapper>
   )
   

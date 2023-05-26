@@ -3,11 +3,12 @@ import { styled } from 'styled-components'
 import { CardCreator } from 'components/CardCreator'
 import Avatar from "../../assets/img/theman.svg"
 const CreatorWrapper=styled.div`
-background-color:#fff;
+background-color:var(--card-bg-color);
 height: auto;
 margin:30px 20px 0 20px;
 padding:20px;
 border-radius:20px;
+color:var(--text-color);
 .title{
   display: flex;
   justify-content: space-between;
