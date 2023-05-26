@@ -133,17 +133,22 @@ h1{
             }
         }
     }
+    .icon{
+        margin-left:60px;
+    }
     .active{
         p{
             color:#5429FF;
-            .icon path{
-        stroke:#5429FF;
-    }
         }
+        .icon path{
+    stroke:#5429FF;
+}
         
     }
     .navlink{
         text-decoration:none;
+        display:flex;
+        align-items:center;
     }
     
     
@@ -170,29 +175,48 @@ export const Sidebar = () => {
     <SidebarWrapper>
         <img className='logo-img' src={Logo} alt="" />
         <NavLink className="navlink" to="/" activeClassName="active" >
-      
+            <MarketCustomIcon className='icon' stroke='red'/> 
             {/* <MarketCustomIcon className='icon' stroke='red'/> */}
-             <IconSidebar image={IconDash} iconname="Dashboard" />
+             <IconSidebar  iconname="Dashboard" />
         </NavLink>
         {/* <IconSidebar    link={"/"}  image={IconDash} iconname={"Dashboard"}></IconSidebar> */}
         <NavLink className="navlink" to="/market" activeClassName="active" >
-
-            <IconSidebar image={IconMarket} iconname={"Market"}></IconSidebar>
+            <MarketCustomIcon className='icon' stroke='red'/>
+            <IconSidebar iconname={"Market"}></IconSidebar>
         </NavLink>
         <NavLink className="navlink" to="/login" activeClassName="active" >
-             <IconSidebar image={IconMarket} iconname={"Active Bids"}></IconSidebar>
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar  iconname={"Active Bids"}></IconSidebar>
         </NavLink>
         <h1>PROFILE</h1>
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}></IconSidebar>
+        <NavLink className="navlink" to="/d" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar  iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
+        <NavLink className="navlink" to="/c" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar  iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
+        <NavLink className="navlink" to="/e" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
+        <NavLink className="navlink" to="/g" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar  iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
+        <NavLink className="navlink" to="/f" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
+        
         <h1>OTHER</h1>
         <div className='change-mode'>
 
-        <IconSidebar image={IconMarket} iconname={"Dashboard"}>
-        </IconSidebar >
+        <NavLink className="navlink" to="/h" activeClassName="active" >
+             <MarketCustomIcon className='icon' stroke='red'/>
+             <IconSidebar image={IconMarket} iconname={"Active Bids"}></IconSidebar>
+        </NavLink>
             <button className='change-mode-btn'>
        
                 
